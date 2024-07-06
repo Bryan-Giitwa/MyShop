@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Store</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'store/style.css' %}"
+    />
+  </head>
+  <body>
+    <h1>Product List</h1>
+    <ul>
+      {% for product in products %}
+      <li>
+        <span class="product-name">{{ product.name }}</span>
+        <span class="product-price">${{ product.price }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
